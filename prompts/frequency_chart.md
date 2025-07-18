@@ -1,15 +1,8 @@
-# Prompt Frequency ASCII Chart Generator
+I have extracted prompts from my Claude Code conversation history. These prompts represent the types of requests I commonly make while coding. I want you to analyze these prompts and create ASCII charts showing the most frequent prompt types and patterns.
 
-This prompt creates an ASCII visualization showing the most frequent prompt types and patterns from your Claude Code usage history.
+The extracted prompts are located in this directory as both json (extracted_prompts.json) and markdown (extracted_prompts.md). The information in both files is identical, just presented in different formats.
 
-## Instructions
-
-Use this prompt with the extracted prompts JSON data from claude-code-prompt-plunderer. The LLM will analyze your prompts and create ASCII charts showing frequency patterns.
-
-## Prompt
-
-```
-Analyze the following extracted Claude Code prompts data and create ASCII charts showing the most frequent prompt types and patterns.
+Please analyze the prompts data and create ASCII charts showing the most frequent prompt types and patterns.
 
 Create the following visualizations:
 
@@ -70,10 +63,10 @@ Project Setup     ██░░░░░░░░░░░░░░░░░░�
 🏷️ KEYWORD CLOUD
 ────────────────────────────────────────────────────────────
          commit     git       changes
-    file      CODE       prompt    
+    file      CODE       prompt
          create          search
    update    READ     document   push
-      test        branch    
+      test        branch
    please     new      analyze
 
 📈 INSIGHTS
@@ -87,9 +80,6 @@ Project Setup     ██░░░░░░░░░░░░░░░░░░�
 
 Analyze the data and provide specific numbers and percentages based on the actual prompt patterns found.
 
-Here's the prompts data to analyze:
-[INSERT JSON DATA]
-```
 
 ## Example Categories to Look For
 
@@ -118,10 +108,3 @@ When categorizing prompts, consider these patterns:
 **Project Setup:**
 - Keywords: create, initialize, setup, configure, install
 - Patterns: new projects, configuration
-
-## Tips for Best Results
-
-1. Provide the complete JSON data including counts and timestamps
-2. The chart will be more accurate with more prompt data
-3. Look for subtle patterns in language use and repetition
-4. ASCII bars should be proportional to actual percentages

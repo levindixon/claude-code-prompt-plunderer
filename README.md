@@ -120,15 +120,15 @@ The Markdown file provides a human-readable analysis including:
 3. **Use the JSON output** for further analysis:
    ```python
    import json
-   
+
    with open('extracted_prompts.json', 'r') as f:
        data = json.load(f)
-   
+
    # Find your most complex prompts
    complex_prompts = [p for p in data['prompts'] if p['length'] > 200]
-   
+
    # Find prompts used in specific projects
-   project_prompts = [p for p in data['prompts'] 
+   project_prompts = [p for p in data['prompts']
                       if '/myproject' in str(p['working_directories'])]
    ```
 
@@ -148,7 +148,7 @@ The `prompts/` directory contains ready-to-use prompt templates that analyze you
 python3 plunder_prompts.py
 
 # Then use any analysis prompt
-claude "$(cat ./prompts/prompt_style_tengu.md)"
+claude "$(cat ./prompts/style_tengu.md)"
 ```
 
 ### Available Analysis Prompts
@@ -156,16 +156,16 @@ claude "$(cat ./prompts/prompt_style_tengu.md)"
 #### 🎯 [Slash Command Discovery](prompts/slash_command_discovery.md)
 Analyzes your prompts to suggest custom Claude Code slash commands tailored to your workflow. Identifies repetitive patterns and generates ready-to-use command templates.
 
-#### 🦸 [Prompt Style Tengu](prompts/prompt_style_tengu.md)
+#### 🦸 [Prompt Style Tengu](prompts/style_tengu.md)
 Creates a unique ASCII [Tengu](https://github.com/levindixon/tengu_spinner_words?tab=readme-ov-file#the-tengu-discovery) character representing your prompting personality. Includes stats, special moves, and evolution paths. Perfect for sharing in Slack!
 
-#### 📊 [Prompt Frequency Chart](prompts/prompt_frequency_chart.md)
+#### 📊 [Prompt Frequency Chart](prompts/frequency_chart.md)
 Generates ASCII visualizations of your prompt patterns including category breakdowns, length distributions, and keyword clouds. Great for understanding your Claude Code usage at a glance.
 
-#### 📈 [Prompt Evolution Timeline](prompts/prompt_evolution_timeline.md)
+#### 📈 [Prompt Evolution Timeline](prompts/evolution_timeline.md)
 Shows how your prompting style has evolved over time with an ASCII timeline. Tracks skill progression, project transitions, and identifies key growth moments.
 
-#### 🎭 [Prompt Personality Report](prompts/prompt_personality_report.md)
+#### 🎭 [Prompt Personality Report](prompts/personality_report.md)
 Produces a comprehensive personality analysis based on your prompting patterns. Reveals hidden traits, communication style, and predicts your future evolution as a prompt engineer.
 
 ## Future Ideas

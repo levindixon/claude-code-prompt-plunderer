@@ -1,15 +1,8 @@
-# Prompt Personality Analysis Report
+I have extracted prompts from my Claude Code conversation history. These prompts represent the types of requests I commonly make while coding. I want you to analyze these prompts and create a comprehensive personality analysis report based on my prompting patterns. Make it fun, insightful, and shareable!
 
-This prompt generates a fun, insightful personality analysis based on your Claude Code prompting patterns, revealing your coding personality type and hidden traits.
+The extracted prompts are located in this directory as both json (extracted_prompts.json) and markdown (extracted_prompts.md). The information in both files is identical, just presented in different formats.
 
-## Instructions
-
-Use this prompt with the extracted prompts JSON data from claude-code-prompt-plunderer. The LLM will perform a "psychological analysis" of your prompting patterns and generate an entertaining personality report.
-
-## Prompt
-
-```
-Analyze the following extracted Claude Code prompts data and create a comprehensive personality analysis report based on the user's prompting patterns. Make it fun, insightful, and shareable!
+Please analyze the prompts data and create a comprehensive personality analysis report based on the user's prompting patterns.
 
 Generate the following analysis:
 
@@ -27,16 +20,16 @@ Based on your prompts, you are:
 
 [█████████░] 90% The Perfectionist
   └─ "Commit messages must be well written" appears often
-  
-[████████░░] 80% The Collaborator  
+
+[████████░░] 80% The Collaborator
   └─ Frequent use of "let's", "we", and "please"
-  
+
 [███████░░░] 70% The Architect
   └─ Creates detailed plans before implementation
-  
+
 [██████░░░░] 60% The Time Traveler
   └─ Asks LLMs to create prompts for future LLMs
-  
+
 [█████░░░░░] 50% The Commitment-Phobe
   └─ "Don't push" appears suspiciously often
 
@@ -88,7 +81,7 @@ Like an octopus, you:
 💭 WHAT YOUR PROMPTS SAY ABOUT YOU
 ────────────────────────────────────────────────────────────────
 "You're the type of developer who reads documentation for fun,
-tests in production (but carefully), and has strong opinions 
+tests in production (but carefully), and has strong opinions
 about commit message formatting. You believe in the power of
 collaboration, even with AI, and you're not afraid to ask the
 same question multiple times until you get it just right.
@@ -124,10 +117,6 @@ Base the analysis on actual patterns found in the data, including:
 - Language patterns and politeness
 - Technical vs creative balance
 - Meta-cognitive behaviors
-
-Here's the prompts data to analyze:
-[INSERT JSON DATA]
-```
 
 ## Personality Traits to Look For
 

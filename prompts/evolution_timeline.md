@@ -1,15 +1,8 @@
-# Prompt Evolution Timeline Generator
+I have extracted prompts from my Claude Code conversation history. These prompts represent the types of requests I commonly make while coding. I want you to analyze these prompts and create an ASCII timeline showing how my prompting style has evolved over time.
 
-This prompt creates an ASCII timeline showing how your prompting style has evolved over time based on the timestamps in your Claude Code conversation history.
+The extracted prompts are located in this directory as both json (extracted_prompts.json) and markdown (extracted_prompts.md). The information in both files is identical, just presented in different formats.
 
-## Instructions
-
-Use this prompt with the extracted prompts JSON data from claude-code-prompt-plunderer. The LLM will analyze temporal patterns and create a visual timeline of your prompting evolution.
-
-## Prompt
-
-```
-Analyze the following extracted Claude Code prompts data and create an ASCII timeline showing how the user's prompting style has evolved over time.
+Please analyze the prompts data and create an ASCII timeline showing how the user's prompting style has evolved over time.
 
 Create a comprehensive evolution timeline that includes:
 
@@ -90,7 +83,7 @@ Meta-Awareness:     ▁▁▁▄███  (Late-stage emergence)
 🎯 KEY GROWTH INDICATORS
 ────────────────────────────────────────────────────────────────
 • From "can be any language" → Specific technical searches
-• From single commits → Complex git workflows  
+• From single commits → Complex git workflows
 • From using tools → Creating tools
 • From asking questions → Engineering prompts
 
@@ -108,9 +101,6 @@ Based on trajectory: Prompt Automation & AI Orchestration
 
 Include specific quotes and examples from the actual data to support the timeline.
 
-Here's the prompts data to analyze:
-[INSERT JSON DATA]
-```
 
 ## Key Elements to Analyze
 

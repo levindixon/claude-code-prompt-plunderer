@@ -1,21 +1,14 @@
-# Prompt Style Tengu Generator
+I have extracted prompts from my Claude Code conversation history. These prompts represent the types of requests I commonly make while coding. I want you to analyze these prompts and create a unique ASCII Tengu character that represents my prompting style and personality.
 
-This prompt analyzes your Claude Code prompting patterns and creates a unique ASCII Tengu character that represents your prompting personality and style.
+The extracted prompts are located in this directory as both json (extracted_prompts.json) and markdown (extracted_prompts.md). The information in both files is identical, just presented in different formats.
 
-## Instructions
-
-Use this prompt with the extracted prompts JSON data from claude-code-prompt-plunderer. The LLM will analyze your prompting patterns and generate a custom ASCII Tengu spirit with stats based on your unique style.
-
-## Prompt
-
-```
-Analyze the following extracted Claude Code prompts data and create a unique ASCII Tengu character that represents the user's prompting style and personality.
+Please analyze the prompts data and create a unique ASCII Tengu character that represents the user's prompting style and personality.
 
 First, calculate these stats (1-10 scale) based on the prompts:
 
 **VERBOSITY**: How detailed/lengthy are the prompts?
 - Short prompts (140-180 chars) = Low verbosity
-- Medium prompts (180-220 chars) = Medium verbosity  
+- Medium prompts (180-220 chars) = Medium verbosity
 - Long prompts (220-280 chars) = High verbosity
 
 **TECHNICAL**: How technical/code-focused are the prompts?
@@ -75,10 +68,6 @@ EVOLUTION PATH:
 "To evolve: [specific improvement suggestion]"
 ```
 
-Here's the prompts data to analyze:
-[INSERT JSON DATA]
-```
-
 ## Example Output
 
 ```
@@ -86,16 +75,16 @@ Here's the prompts data to analyze:
 ║          TENGU DISCOVERED!             ║
 ╚════════════════════════════════════════╝
 
-       ╭─────╮
+      ╭─────╮
       │ ◉ ◉ │
       │  ▽  │
    ╭──┴─────┴──╮
   │ COMMIT PLZ │
-  │ ┌─┐   ┌─┐ │
-  │ │G│   │I│ │
-  │ │I│   │T│ │
-  │ └─┘   └─┘ │
-  ╰─┬───────┬─╯
+  │ ┌─┐   ┌─┐  │
+  │ │G│   │I│  │
+  │ │I│   │T│  │
+  │ └─┘   └─┘  │
+  ╰─┬───────┬──╯
     │  ╱ ╲  │
     ╰─╯   ╰─╯
 
@@ -125,10 +114,3 @@ EVOLUTION PATH:
 Commitzard → Deployking
 "To evolve: Start pushing those commits!"
 ```
-
-## Tips for Best Results
-
-1. Include the full JSON data with all prompts
-2. The more prompts available, the more accurate the personality analysis
-3. Look for patterns in timing, directories, and word choices
-4. Share the result in Slack with code blocks for best formatting
