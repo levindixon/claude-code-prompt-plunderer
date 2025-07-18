@@ -73,7 +73,7 @@ Project Setup     ██░░░░░░░░░░░░░░░░░░�
 ────────────────────────────────────────────────────────────
 • Total Prompts: 84 (71 unique)
 • Average Length: 196 characters
-• Most Active Directory: /Users/levindixon/src/embercom-*
+• Most Active Directory: /Users/developer/projects/*
 • Favorite Issue: intercom/intercom#410146
 • Politeness Score: High (frequent "please", "let's")
 ```
