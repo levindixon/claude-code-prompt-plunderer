@@ -139,6 +139,12 @@ The Markdown file provides a human-readable analysis including:
 - All processing happens locally on your computer
 - The tool respects file permissions and will skip files it cannot read
 
+## LLM Analysis Examples
+
+The `prompts/` directory contains example prompts for using LLMs to analyze your extracted data:
+
+- **[Slash Command Discovery](prompts/slash_command_discovery.md)**: Analyze your extracted prompts to discover patterns and automatically generate custom Claude Code slash commands tailored to your workflow
+
 ## Future Ideas
 
 While not implemented yet, here are some interesting extensions you could build:
