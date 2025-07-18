@@ -1,15 +1,15 @@
-# Prompt Style Pokemon Generator
+# Prompt Style Tengu Generator
 
-This prompt analyzes your Claude Code prompting patterns and creates a unique ASCII Pokemon-like character that represents your prompting personality and style.
+This prompt analyzes your Claude Code prompting patterns and creates a unique ASCII Tengu character that represents your prompting personality and style.
 
 ## Instructions
 
-Use this prompt with the extracted prompts JSON data from claude-code-prompt-plunderer. The LLM will analyze your prompting patterns and generate a custom ASCII creature with stats based on your unique style.
+Use this prompt with the extracted prompts JSON data from claude-code-prompt-plunderer. The LLM will analyze your prompting patterns and generate a custom ASCII Tengu spirit with stats based on your unique style.
 
 ## Prompt
 
 ```
-Analyze the following extracted Claude Code prompts data and create a unique ASCII Pokemon-like character that represents the user's prompting style and personality.
+Analyze the following extracted Claude Code prompts data and create a unique ASCII Tengu character that represents the user's prompting style and personality.
 
 First, calculate these stats (1-10 scale) based on the prompts:
 
@@ -33,7 +33,7 @@ First, calculate these stats (1-10 scale) based on the prompts:
 **COLLABORATION**: How collaborative is their style?
 - Look for: "let's", "we", "please", "can you", politeness markers
 
-Based on these stats, create an ASCII Pokemon with:
+Based on these stats, create an ASCII Tengu with:
 1. A creative name combining their prompting traits
 2. Type(s) that match their style (e.g., Technical/Creative, Persistent/Clear)
 3. ASCII art (15-20 lines) that reflects their personality
@@ -45,12 +45,12 @@ Format the output for easy sharing in Slack:
 
 ```
 ╔════════════════════════════════════════╗
-║        PROMPTEMON DISCOVERED!          ║
+║          TENGU DISCOVERED!             ║
 ╚════════════════════════════════════════╝
 
 [ASCII ART HERE]
 
-Name: [Creative Pokemon Name]
+Name: [Creative Tengu Name]
 Type: [Type1]/[Type2]
 
 STATS:
@@ -83,7 +83,7 @@ Here's the prompts data to analyze:
 
 ```
 ╔════════════════════════════════════════╗
-║        PROMPTEMON DISCOVERED!          ║
+║          TENGU DISCOVERED!             ║
 ╚════════════════════════════════════════╝
 
        ╭─────╮

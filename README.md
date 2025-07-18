@@ -139,11 +139,34 @@ The Markdown file provides a human-readable analysis including:
 - All processing happens locally on your computer
 - The tool respects file permissions and will skip files it cannot read
 
-## LLM Analysis Examples
+## Example Prompts & Analysis Tools
 
-The `prompts/` directory contains example prompts for using LLMs to analyze your extracted data:
+The `prompts/` directory contains ready-to-use prompt templates that analyze your extracted data in creative and insightful ways. Use them with Claude Code like this:
 
-- **[Slash Command Discovery](prompts/slash_command_discovery.md)**: Analyze your extracted prompts to discover patterns and automatically generate custom Claude Code slash commands tailored to your workflow
+```bash
+# First extract your prompts
+python3 plunder_prompts.py
+
+# Then use any analysis prompt
+claude "$(cat ./prompts/prompt_style_tengu.md)"
+```
+
+### Available Analysis Prompts
+
+#### 🎯 [Slash Command Discovery](prompts/slash_command_discovery.md)
+Analyzes your prompts to suggest custom Claude Code slash commands tailored to your workflow. Identifies repetitive patterns and generates ready-to-use command templates.
+
+#### 🦸 [Prompt Style Tengu](prompts/prompt_style_tengu.md)
+Creates a unique ASCII [Tengu](https://github.com/levindixon/tengu_spinner_words?tab=readme-ov-file#the-tengu-discovery) character representing your prompting personality. Includes stats, special moves, and evolution paths. Perfect for sharing in Slack!
+
+#### 📊 [Prompt Frequency Chart](prompts/prompt_frequency_chart.md)
+Generates ASCII visualizations of your prompt patterns including category breakdowns, length distributions, and keyword clouds. Great for understanding your Claude Code usage at a glance.
+
+#### 📈 [Prompt Evolution Timeline](prompts/prompt_evolution_timeline.md)
+Shows how your prompting style has evolved over time with an ASCII timeline. Tracks skill progression, project transitions, and identifies key growth moments.
+
+#### 🎭 [Prompt Personality Report](prompts/prompt_personality_report.md)
+Produces a comprehensive personality analysis based on your prompting patterns. Reveals hidden traits, communication style, and predicts your future evolution as a prompt engineer.
 
 ## Future Ideas
 
