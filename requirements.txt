@@ -1,0 +1,13 @@
+# No external dependencies required!
+# This project uses only Python standard library modules:
+# - json
+# - os
+# - argparse
+# - pathlib
+# - typing
+# - datetime
+
+# Python 3.6+ is required for:
+# - f-strings
+# - typing module
+# - pathlib improvements
