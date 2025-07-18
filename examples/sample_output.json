@@ -1,0 +1,268 @@
+{
+  "metadata": {
+    "total_prompts": 47,
+    "unique_prompts": 23,
+    "extraction_date": "2024-01-15T14:22:18.123456",
+    "max_length_filter": 280,
+    "min_length_filter": 140
+  },
+  "prompts": [
+    {
+      "id": 1,
+      "text": "Create a Python script that monitors a directory for new files and automatically backs them up to a specified location",
+      "count": 5,
+      "length": 177,
+      "first_timestamp": "2024-01-10T09:15:23.456789",
+      "last_timestamp": "2024-01-14T16:42:11.987654",
+      "working_directories": [
+        "/Users/developer/projects/file-monitor",
+        "/Users/developer/scripts"
+      ]
+    },
+    {
+      "id": 2,
+      "text": "Help me refactor this function to use type hints and follow PEP 8 style guidelines. It should also handle edge cases better",
+      "count": 4,
+      "length": 202,
+      "first_timestamp": "2024-01-11T10:30:45.123456",
+      "last_timestamp": "2024-01-13T15:18:33.654321",
+      "working_directories": [
+        "/Users/developer/projects/web-api",
+        "/Users/developer/projects/data-processor"
+      ]
+    },
+    {
+      "id": 3,
+      "text": "Write unit tests for the authentication module using pytest. Include tests for login, logout, and token refresh functionality",
+      "count": 3,
+      "length": 206,
+      "first_timestamp": "2024-01-12T11:45:12.789012",
+      "last_timestamp": "2024-01-14T09:22:45.321098",
+      "working_directories": [
+        "/Users/developer/projects/auth-service"
+      ]
+    },
+    {
+      "id": 4,
+      "text": "Analyze this error message and help me understand what's causing the issue. Suggest a fix that addresses the root cause",
+      "count": 3,
+      "length": 190,
+      "first_timestamp": "2024-01-10T14:55:33.456789",
+      "last_timestamp": "2024-01-15T08:12:22.987654",
+      "working_directories": [
+        "/Users/developer/projects/mobile-app",
+        "/Users/developer/projects/web-frontend"
+      ]
+    },
+    {
+      "id": 5,
+      "text": "Create a comprehensive README.md file for this project including installation instructions, usage examples, and API docs",
+      "count": 2,
+      "length": 194,
+      "first_timestamp": "2024-01-13T09:30:15.123456",
+      "last_timestamp": "2024-01-14T17:45:28.654321",
+      "working_directories": [
+        "/Users/developer/projects/cli-tool",
+        "/Users/developer/projects/python-lib"
+      ]
+    },
+    {
+      "id": 6,
+      "text": "Convert this class-based React component to a functional component using hooks. Maintain all existing functionality",
+      "count": 2,
+      "length": 175,
+      "first_timestamp": "2024-01-11T13:20:44.789012",
+      "last_timestamp": "2024-01-12T16:33:55.321098",
+      "working_directories": [
+        "/Users/developer/projects/react-dashboard"
+      ]
+    },
+    {
+      "id": 7,
+      "text": "Implement a caching mechanism for this API endpoint to improve performance. Use Redis if available, otherwise use in-memory",
+      "count": 2,
+      "length": 202,
+      "first_timestamp": "2024-01-10T11:15:22.456789",
+      "last_timestamp": "2024-01-13T14:28:19.987654",
+      "working_directories": [
+        "/Users/developer/projects/api-gateway"
+      ]
+    },
+    {
+      "id": 8,
+      "text": "Debug this SQL query that's running slowly. Explain what's causing the performance issue and optimize it for better speed",
+      "count": 2,
+      "length": 195,
+      "first_timestamp": "2024-01-14T10:45:33.123456",
+      "last_timestamp": "2024-01-15T11:22:44.654321",
+      "working_directories": [
+        "/Users/developer/projects/analytics-db"
+      ]
+    },
+    {
+      "id": 9,
+      "text": "Set up a GitHub Actions workflow for this project that runs tests, linting, and builds on every pull request",
+      "count": 1,
+      "length": 165,
+      "first_timestamp": "2024-01-12T08:30:11.789012",
+      "last_timestamp": "2024-01-12T08:30:11.789012",
+      "working_directories": [
+        "/Users/developer/projects/open-source-lib"
+      ]
+    },
+    {
+      "id": 10,
+      "text": "Create a Docker container for this application with multi-stage build to minimize the final image size",
+      "count": 1,
+      "length": 158,
+      "first_timestamp": "2024-01-13T12:18:29.321098",
+      "last_timestamp": "2024-01-13T12:18:29.321098",
+      "working_directories": [
+        "/Users/developer/projects/microservice"
+      ]
+    },
+    {
+      "id": 11,
+      "text": "Explain how this recursive algorithm works and suggest ways to optimize it. Include time and space complexity analysis",
+      "count": 1,
+      "length": 188,
+      "first_timestamp": "2024-01-11T15:55:17.456789",
+      "last_timestamp": "2024-01-11T15:55:17.456789",
+      "working_directories": [
+        "/Users/developer/leetcode-practice"
+      ]
+    },
+    {
+      "id": 12,
+      "text": "Generate TypeScript interfaces from this JSON schema. Make sure to handle nested objects and arrays properly",
+      "count": 1,
+      "length": 166,
+      "first_timestamp": "2024-01-14T13:40:52.987654",
+      "last_timestamp": "2024-01-14T13:40:52.987654",
+      "working_directories": [
+        "/Users/developer/projects/typescript-api"
+      ]
+    },
+    {
+      "id": 13,
+      "text": "Help me understand this regex pattern and modify it to also match email addresses with plus signs in the local part",
+      "count": 1,
+      "length": 176,
+      "first_timestamp": "2024-01-10T16:25:38.123456",
+      "last_timestamp": "2024-01-10T16:25:38.123456",
+      "working_directories": [
+        "/Users/developer/projects/email-validator"
+      ]
+    },
+    {
+      "id": 14,
+      "text": "Create a command-line argument parser for this script using argparse. Include help text and validation for all options",
+      "count": 1,
+      "length": 189,
+      "first_timestamp": "2024-01-15T09:12:15.654321",
+      "last_timestamp": "2024-01-15T09:12:15.654321",
+      "working_directories": [
+        "/Users/developer/scripts/automation"
+      ]
+    },
+    {
+      "id": 15,
+      "text": "Review this pull request and suggest improvements. Focus on code quality, potential bugs, and performance issues",
+      "count": 1,
+      "length": 172,
+      "first_timestamp": "2024-01-12T14:33:49.789012",
+      "last_timestamp": "2024-01-12T14:33:49.789012",
+      "working_directories": [
+        "/Users/developer/projects/team-project"
+      ]
+    },
+    {
+      "id": 16,
+      "text": "Implement rate limiting for this API using a sliding window algorithm. Include configurable limits per user and IP",
+      "count": 1,
+      "length": 173,
+      "first_timestamp": "2024-01-13T10:50:23.321098",
+      "last_timestamp": "2024-01-13T10:50:23.321098",
+      "working_directories": [
+        "/Users/developer/projects/public-api"
+      ]
+    },
+    {
+      "id": 17,
+      "text": "Convert this CSV data processing script to use pandas for better performance. Maintain the same output format",
+      "count": 1,
+      "length": 165,
+      "first_timestamp": "2024-01-11T08:45:56.456789",
+      "last_timestamp": "2024-01-11T08:45:56.456789",
+      "working_directories": [
+        "/Users/developer/data-analysis"
+      ]
+    },
+    {
+      "id": 18,
+      "text": "Create a git pre-commit hook that runs linting and formatting checks. It should fail if any issues are found",
+      "count": 1,
+      "length": 164,
+      "first_timestamp": "2024-01-14T15:28:41.987654",
+      "last_timestamp": "2024-01-14T15:28:41.987654",
+      "working_directories": [
+        "/Users/developer/projects/team-standards"
+      ]
+    },
+    {
+      "id": 19,
+      "text": "Design a database schema for this e-commerce application. Include tables for users, products, orders, and reviews",
+      "count": 1,
+      "length": 172,
+      "first_timestamp": "2024-01-10T12:30:18.123456",
+      "last_timestamp": "2024-01-10T12:30:18.123456",
+      "working_directories": [
+        "/Users/developer/projects/online-store"
+      ]
+    },
+    {
+      "id": 20,
+      "text": "Implement pagination for this REST API endpoint. Support both cursor-based and offset-based pagination methods",
+      "count": 1,
+      "length": 168,
+      "first_timestamp": "2024-01-15T13:15:27.654321",
+      "last_timestamp": "2024-01-15T13:15:27.654321",
+      "working_directories": [
+        "/Users/developer/projects/social-api"
+      ]
+    },
+    {
+      "id": 21,
+      "text": "Add comprehensive logging to this module using Python's logging module. Include different log levels and rotation",
+      "count": 1,
+      "length": 171,
+      "first_timestamp": "2024-01-12T17:40:33.789012",
+      "last_timestamp": "2024-01-12T17:40:33.789012",
+      "working_directories": [
+        "/Users/developer/projects/backend-service"
+      ]
+    },
+    {
+      "id": 22,
+      "text": "Create a custom React hook for handling form validation. It should support multiple validation rules and error messages",
+      "count": 1,
+      "length": 195,
+      "first_timestamp": "2024-01-13T16:55:12.321098",
+      "last_timestamp": "2024-01-13T16:55:12.321098",
+      "working_directories": [
+        "/Users/developer/projects/react-forms"
+      ]
+    },
+    {
+      "id": 23,
+      "text": "Optimize this image processing function to handle large files without running out of memory. Use streaming if possible",
+      "count": 1,
+      "length": 190,
+      "first_timestamp": "2024-01-11T17:22:45.456789",
+      "last_timestamp": "2024-01-11T17:22:45.456789",
+      "working_directories": [
+        "/Users/developer/projects/image-processor"
+      ]
+    }
+  ]
+}
