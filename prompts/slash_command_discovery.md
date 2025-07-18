@@ -1,15 +1,9 @@
-# Slash Command Discovery Prompt
-
-Use this prompt with an LLM to analyze your extracted Claude Code prompts and discover opportunities for custom slash commands.
-
-## Prompt Template
-
-```
-I have extracted [X] prompts from my Claude Code conversation history. These prompts represent the types of requests I commonly make while coding. I want you to analyze these prompts to:
+I have extracted prompts from my Claude Code conversation history. These prompts represent the types of requests I commonly make while coding. I want you to analyze these prompts to:
 
 1. Identify recurring patterns, themes, or types of requests
 2. Group similar prompts together
-3. Suggest custom Claude Code slash commands that would save me time
+3. Suggest custom Claude Code slash commands (documentation provided below) that would save me time
+4. Save each of the suggested custom Claude Code slash commands in a new directory named custom-command-suggestions ready to be placed into the user's ~/.claude/commands directory.
 
 For each suggested slash command:
 - Provide a command name (e.g., /refactor-component)
@@ -17,73 +11,152 @@ For each suggested slash command:
 - Include placeholders for variable parts using {{variable_name}} syntax
 - Explain what pattern you identified that led to this suggestion
 
-Here are my extracted prompts:
-
-[PASTE YOUR EXTRACTED PROMPTS JSON OR MARKDOWN HERE]
+The extracted prompts are located in this directory as both json (extracted_prompts.json) and markdown (extracted_prompts.md). The information in both files is identical, just presented in different formats.
 
 Please analyze these and suggest 5-10 custom slash commands that would be most valuable based on my usage patterns. Focus on commands that would:
 - Save me from typing similar requests repeatedly
 - Standardize my common workflows
 - Ensure I don't forget important steps in recurring tasks
-```
 
-## How to Use This Prompt
+````markdown
+# Claude Code Slash Commands Guide
 
-1. Run the prompt plunderer to extract your Claude Code prompts:
-   ```bash
-   python3 plunder_prompts.py
-   ```
+## Overview
 
-2. Copy the contents of either:
-   - `extracted_prompts.json` (for structured data)
-   - `extracted_prompts_analysis.md` (for readable format)
+Claude Code supports custom slash commands - reusable prompts stored as Markdown files that can be executed with arguments. Commands start with `/` and can be project-specific or user-level.
 
-3. Paste the prompt template above into your preferred LLM (Claude, ChatGPT, etc.)
+## Command Structure
 
-4. Replace `[PASTE YOUR EXTRACTED PROMPTS JSON OR MARKDOWN HERE]` with your extracted prompts
+### File Locations
+- **Project commands**: `.claude/commands/` (shared with team, marked as "(project)")
+- **User commands**: `~/.claude/commands/` (personal, marked as "(user)")
 
-5. Review the suggested slash commands and create the ones you find useful
+### File Format
+Commands are Markdown files (`.md` extension) with:
+- **Filename**: Becomes the command name (e.g., `optimize.md` → `/optimize`)
+- **YAML frontmatter**: Metadata configuration
+- **Main content**: The prompt instructions
 
-## Example Slash Command Format
-
-Based on the analysis, the LLM might suggest commands like:
-
-### /test-and-fix
+### Basic Template
 ```markdown
-Run all tests for the current project and automatically fix any failing tests. Follow these steps:
+---
+description: Brief description shown in /help
+allowed-tools: [Bash, Read, Write, Edit]  # Required for tool usage
+argument-hint: <optional-hint>  # Shows during auto-complete
+---
 
-1. Identify the test command from package.json or project configuration
-2. Run the full test suite
-3. For each failing test:
-   - Read the test file and understand what it's testing
-   - Examine the error message and stack trace
-   - Fix the underlying issue (not just the test)
-   - Re-run that specific test to confirm the fix
-4. Run the full test suite again to ensure no regressions
-5. Provide a summary of what was fixed
-
-Focus on fixing the actual bugs, not just making tests pass artificially.
+Your prompt instructions here...
 ```
 
-### /add-feature
+## Key Features
+
+### 1. Arguments
+Use `$ARGUMENTS` placeholder to accept dynamic input:
 ```markdown
-Implement a new feature: {{feature_description}}
+---
+description: Generate a React component
+allowed-tools: [Write]
+argument-hint: <component-name>
+---
 
-1. First understand the existing codebase structure
-2. Create a TodoWrite list for the implementation steps
-3. Follow existing patterns and conventions in the codebase
-4. Add appropriate error handling and validation
-5. Create or update tests for the new functionality
-6. Update any relevant documentation
-7. Run linting and type checking
-
-Component/Module name: {{component_name}}
-Location: {{file_location}}
+Create a React component named $ARGUMENTS with proper TypeScript types.
 ```
 
-## Tips for Better Results
+### 2. Bash Command Execution
+Prefix with `!` to run bash commands before the prompt:
+```markdown
+---
+description: Analyze current git status
+allowed-tools: [Bash]
+---
 
-- Include as many prompts as possible for better pattern recognition
-- If you have specific workflows you want to optimize, mention them in your request
-- Consider creating multiple specialized prompts for different aspects of your work (frontend, backend, testing, etc.)
-- Iterate on the suggested commands based on your actual usage
+!git status
+!git diff --stat
+
+Based on the git status above, suggest the next steps.
+```
+
+### 3. File References
+Use `@` to include file contents:
+```markdown
+---
+description: Review code structure
+allowed-tools: [Read]
+---
+
+Review the following files:
+@src/main.ts
+@src/config.json
+
+Provide recommendations for improvements.
+```
+
+### 4. Namespacing
+Organize commands in subdirectories:
+- `.claude/commands/frontend/component.md` → `/frontend:component`
+- `.claude/commands/backend/api.md` → `/backend:api`
+
+## Example Commands
+
+### Simple Command
+```markdown
+---
+description: Format and lint code
+allowed-tools: [Bash]
+---
+
+!npm run lint
+!npm run format
+
+Fix any linting errors found above.
+```
+
+### Command with Arguments
+```markdown
+---
+description: Create a new feature module
+allowed-tools: [Write, Edit]
+argument-hint: <module-name>
+---
+
+Create a new feature module named "$ARGUMENTS" with:
+- Module file at src/modules/$ARGUMENTS/index.ts
+- Test file at src/modules/$ARGUMENTS/test.ts
+- Follow existing module patterns in the codebase
+```
+
+### Complex Command with Multiple Features
+```markdown
+---
+description: Security audit for a file
+allowed-tools: [Read, Bash]
+argument-hint: <file-path>
+---
+
+!file $ARGUMENTS
+
+@$ARGUMENTS
+
+Perform a security audit on the file above, checking for:
+- Hardcoded credentials
+- SQL injection vulnerabilities
+- XSS vulnerabilities
+- Insecure dependencies
+- Other security best practices
+```
+
+## Best Practices
+
+1. **Always specify `allowed-tools`** when using tools
+2. **Use clear `description`** for discoverability in `/help`
+3. **Add `argument-hint`** when expecting arguments
+4. **Keep commands focused** on a single task
+5. **Use namespacing** to organize related commands
+6. **Test commands** before sharing with team
+
+## Usage
+
+- Execute: `/command-name [arguments]`
+- List all commands: `/help`
+- Commands auto-complete after typing `/`
+````
